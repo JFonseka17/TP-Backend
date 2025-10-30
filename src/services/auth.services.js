@@ -27,7 +27,7 @@ class AuthService {
             },
             ENVIRONMENT.JWT_SECRET
         )
-        const emailResult = await mailTransporter.sendMail ({
+        await mailTransporter.sendMail ({
             from: ENVIRONMENT.GMAIL_USER,
             to: email,
             subject: 'Verifica tu cuenta de mail',
@@ -83,12 +83,12 @@ class AuthService {
             {
                 name: user_found.name,
                 email: user_found.email,
-                id: user_found.id
+                id: user_found._id
             },
             ENVIRONMENT.JWT_SECRET,
-            /* {
+            {
                 expiresIn: '24hs'
-            } */
+            }
         )
         return {
             auth_token: auth_token

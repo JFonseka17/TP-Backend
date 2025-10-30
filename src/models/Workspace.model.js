@@ -4,6 +4,7 @@ const workspaceSchema = new mongoose.Schema (
     {
         name: {
             type: String,
+            require: true
         },
         url_image: {
             type: String
@@ -25,6 +26,6 @@ const workspaceSchema = new mongoose.Schema (
     }
 )
 
-const Workspace=mongoose.model('Workspace', workspaceSchema)
+const Workspace = mongoose.model('Workspace', workspaceSchema)
 
 export default Workspace

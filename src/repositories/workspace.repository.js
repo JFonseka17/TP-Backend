@@ -4,7 +4,7 @@ class WorkspaceRepository {
 
     static async create (name, url_image) {
         try {
-            await Workspace.insertOne ({
+            return await Workspace.insertOne ({
                 name: name,
                 url_image: url_image
             })
@@ -41,7 +41,7 @@ class WorkspaceRepository {
 
     static async getAll () {
         try {
-            const Workspaces = await Workspace.find ()
+            const Workspaces = await Workspace.find ({ active: true })
             return Workspaces
         } 
         catch (error) {

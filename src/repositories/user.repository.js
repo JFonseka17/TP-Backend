@@ -9,7 +9,6 @@ class UserRepository {
                 email: email,
                 password: password
             })
-            console.log('[SERVER]: usuario creado exitosamente')
         }
         catch (error) {
             console.error('[SERVER ERROR]: No se pudo crear el usuario', error)
@@ -19,8 +18,11 @@ class UserRepository {
 
     static async getAll() {
         try {
-            const users = await User.find()
-            console.log(users)
+            const users = await User.find(
+                {
+                    active: true
+                }
+            )
             return users
         }
         catch (error) {
@@ -32,7 +34,6 @@ class UserRepository {
     static async getById(user_id) {
         try {
             const user_found = await User.findById(user_id)
-            console.log(user_found)
             return user_found
         }
         catch (error) {
@@ -47,7 +48,6 @@ class UserRepository {
                 email: email,
                 active: true
             })
-            console.log(user_found)
             return user_found
         }
         catch (error) {
