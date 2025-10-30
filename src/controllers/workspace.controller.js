@@ -5,15 +5,17 @@ import WorkspaceService from "../services/workspace.service.js"
 class workspaceController {
     static async getAll(request, response) {
         try {
-            /* const workspaces = await WorkspaceService.getAll() */
-            console.log(request.user)
+            const user = request.user
+
+            const workspaces = await WorkspaceService.getAll(user.id)
+            
             response.status(200).json(
                 {
                     ok: true,
                     status: 200,
                     message: 'Workspaces obtenidos con exito',
                     data: {
-                        /* workspaces: workspaces */
+                        workspaces: workspaces
                     }
                 }
             )
@@ -39,6 +41,46 @@ class workspaceController {
         }
 
     }
+
+    static async create (request, response){
+        try{
+            const user = request.user
+            const {name, url_img} = request.body
+
+            const workspace_created = await WorkspaceService.create( user.id, name, url_img )
+
+            response.status(201).json(
+                {
+                    status: 201,
+                    ok: true,
+                    message: 'Workspace creado con exito',
+                    data: {
+                        workspace_created
+                    }
+                }
+            )
+        }
+        catch(error){
+            if(error.status){
+                return response.status(error.status).json({
+                    ok:false,
+                    message: error.message,
+                    status: error.status
+                })
+            }
+            else{
+                console.error(
+                    'ERROR AL OBTENER LOS WORKSPACES', error
+                )
+                return response.status(500).json({
+                    ok: false,
+                    message: 'Error interno del servidor',
+                    status: 500
+                })
+            }
+        }
+    }
+
 }
 
 export default workspaceController

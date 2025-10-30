@@ -5,8 +5,8 @@ class MemberWorkspaceRepository {
     static async create (user_id, workspace_id, role) {
         try {
             await MemberWorkspace.insertOne ({
-                user_id: user_id,
-                workspace_id: workspace_id,
+                id_user: user_id,
+                id_workspace: workspace_id,
                 role: role
             })
         } 
@@ -61,6 +61,32 @@ class MemberWorkspaceRepository {
             throw error
         }
     }
+
+    static async getAllByUserId (user_id) {
+        try {
+            const members = await MemberWorkspace.find ({ id_user: user_id }).populate('id_workspace')
+
+            const members_list_formated = members.map(
+                (member) => {
+                    return {
+                        worspace_id: member.id_workspace._id,
+                        workspace_name: member.id_workspace.name,
+                        workspace_created_at: member.id_workspace.created_at,
+                        workspace_url_image: member.id_workspace.url_image,
+                        member_id: member._id,
+                        member_user_id: member.id_user,
+                        member_role: member.role
+                    }
+                }
+            )
+            return members_list_formated
+        } 
+        catch (error) {
+            console.error ('[SERVER ERROR]: No se pudo obtener la lista de Miembros', error)
+            throw error
+        }
+    }
+
 }
 
 export default MemberWorkspaceRepository
