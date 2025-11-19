@@ -4,13 +4,15 @@ const memberWorkspaceSchema = new mongoose.Schema (
     {
         id_user: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'User',
-            required: true
+            required: true,
+            ref: 'User'
+            
         },
         id_workspace: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Workspace',
-            required: true
+            required: true,
+            ref: 'Workspace'
+            
         },
         role: {
             type: String,

@@ -69,7 +69,7 @@ class MemberWorkspaceRepository {
             const members_list_formated = members.map(
                 (member) => {
                     return {
-                        worspace_id: member.id_workspace._id,
+                        workspace_id: member.id_workspace._id,
                         workspace_name: member.id_workspace.name,
                         workspace_created_at: member.id_workspace.created_at,
                         workspace_url_image: member.id_workspace.url_image,

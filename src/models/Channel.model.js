@@ -4,16 +4,12 @@ const channelSchema = new mongoose.Schema (
     {
         id_workspace: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Workspace',
-            required: true
+            required: true,
+            ref: 'Workspace'
+            
         },
         name: {
             type: String,
-            required: true
-        },
-        is_private: {
-            type: Boolean,
-            default: true,
             required: true
         },
         active: {

@@ -3,8 +3,8 @@ import ENVIRONMENT from "./environment.config.js";
 
 async function connectionToMongoDB() {
     try {
-        const connection_string = ENVIRONMENT.MONGO_DB_CONNECTION_STRING /* ENVIRONMENT.MONGO_DB_HOST + '/' + ENVIRONMENT.MONGO_DB_NAME */
-    //  Await hara que se espere a que se resuelva para continuar la ejecucion
+        const connection_string = ENVIRONMENT.MONGO_DB_CONNECTION_STRING
+
         await mongoose.connect(connection_string, 
             {
                 timeoutMS: 60000,

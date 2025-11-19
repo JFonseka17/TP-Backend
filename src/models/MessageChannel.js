@@ -2,14 +2,15 @@ import mongoose from "mongoose";
 
 const MessageChannelSchema = new mongoose.Schema (
     {
-        id_channel: {
+        channel_id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Channel',
-            required: true
+            required: true,
+            ref: 'Channel'
         },
-        id_sender:{
+        sender_member_id:{
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
+            required: true,
+            ref: 'MemberWorkspace'
         },
         content: {
             type: String,

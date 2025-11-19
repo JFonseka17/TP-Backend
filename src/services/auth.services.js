@@ -5,7 +5,6 @@ import UserRepository from "../repositories/user.repository.js";
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
-
 class AuthService {
     static async register (email, password,name) {
 

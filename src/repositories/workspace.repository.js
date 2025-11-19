@@ -28,10 +28,11 @@ class WorkspaceRepository {
 
     static async updateById (workspace_id, update_workspace) {
         try {
-            await Workspace.findByIdAndUpdate (
+            const update = await Workspace.findByIdAndUpdate (
                 workspace_id,
                 update_workspace
             )
+            return update
         } 
         catch (error) {
             console.error ('[SERVER ERROR]: No se pudo actualizar el workspace con id ' + workspace_id, error)

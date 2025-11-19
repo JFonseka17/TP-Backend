@@ -28,7 +28,8 @@ function workspaceMiddleware(valid_member_roles = []) {
             request.member = member
             request.workspace_selected = workspace_selected
             next()
-        } catch (error) {
+        } 
+        catch (error) {
             if (error.status) {
                 return response.status(error.status).json({
                     ok: false,
