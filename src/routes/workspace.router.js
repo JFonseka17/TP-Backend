@@ -1,11 +1,10 @@
-import express, { request } from "express";
+import express from "express";
 import WorkspaceController from "../controllers/workspace.controller.js";
 import authMiddleware from '../middlewares/authMiddleware.js'
 import workspaceMiddleware from "../middlewares/workspacemiddleware.js";
 import ChannelController from "../controllers/channel.controller.js";
 import channelMiddleware from "../middlewares/channelMiddleware.js";
 import MessagesController from "../controllers/messages.controller.js";
-
 
 const workspaceRouter = express.Router()
 

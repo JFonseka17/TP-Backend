@@ -1,11 +1,10 @@
 import connectionToMongoDB from "./config/configMongoDB.js";
-import express, { request, response } from 'express'
+import express from 'express'
 import authRouter from "./routes/auth.router.js";
 import workspaceRouter from "./routes/workspace.router.js";
 import ENVIRONMENT from "./config/environment.config.js";
 import cors from 'cors'
 import memberRouter from "./routes/member.router.js";
-
 
 connectionToMongoDB()
 

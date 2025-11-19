@@ -1,5 +1,4 @@
 import ENVIRONMENT from "../config/environment.config.js";
-import { ServerError } from "../error.js";
 import AuthService from "../services/auth.services.js";
 
 class AuthController {
