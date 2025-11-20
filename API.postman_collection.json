@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "/api/workspaces",
+			"name": "/api/workspace",
 			"item": [
 				{
 					"name": "/:workspace_id",
@@ -30,7 +30,7 @@
 															"bearer": [
 																{
 																	"key": "token",
-																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjIxMDcyOTksImV4cCI6MTc2MjE5MzY5OX0.PARgqBQO6VVwog9byYCz0wheZakgpzPqYQIuRkhSz5w",
+																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM1NjE0NDAsImV4cCI6MTc2MzY0Nzg0MH0.02SMFME-GmDDGFjegPjtpBQOSCLKJWVveKsDpgZCiWU",
 																	"type": "string"
 																}
 															]
@@ -39,7 +39,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"content\": \"Bienvenios!\"\r\n}",
+															"raw": "{\r\n  \"content\": \"Bienvenidos!\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
@@ -47,9 +47,9 @@
 															}
 														},
 														"url": {
-															"raw": "{{URL_API_2}}/api/workspace/:workspace_id/channels/:channel_id/messages",
+															"raw": "{{API_URL}}/api/workspace/:workspace_id/channels/:channel_id/messages",
 															"host": [
-																"{{URL_API_2}}"
+																"{{API_URL}}"
 															],
 															"path": [
 																"api",
@@ -84,7 +84,7 @@
 															"bearer": [
 																{
 																	"key": "token",
-																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM1NjE0NDAsImV4cCI6MTc2MzY0Nzg0MH0.02SMFME-GmDDGFjegPjtpBQOSCLKJWVveKsDpgZCiWU",
+																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
 																	"type": "string"
 																}
 															]
@@ -93,7 +93,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"content\": \"Bienvenios2!\"\r\n}",
+															"raw": "",
 															"options": {
 																"raw": {
 																	"language": "json"
@@ -101,9 +101,9 @@
 															}
 														},
 														"url": {
-															"raw": "{{URL_API_2}}/api/workspace/:workspace_id/channels/:channel_id/messages",
+															"raw": "{{API_URL}}/api/workspace/:workspace_id/channels/:channel_id/messages",
 															"host": [
-																"{{URL_API_2}}"
+																"{{API_URL}}"
 															],
 															"path": [
 																"api",
@@ -139,7 +139,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjIwMjA0NDUsImV4cCI6MTc2MjEwNjg0NX0.MP-zvhcZI_rNlIN8mMChUS4aOVRGVDqmMPkz1AL6o0k",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM1NjM3NTYsImV4cCI6MTc2MzY1MDE1Nn0.iQ20h1keyQsm4630jVXA3Q336f5ICff7jaBGWID6d6k",
 													"type": "string"
 												}
 											]
@@ -148,7 +148,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"general\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Proveedores\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -156,9 +156,9 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL_API_2}}/api/workspace/:workspace_id/channels",
+											"raw": "{{API_URL}}/api/workspace/:workspace_id/channels",
 											"host": [
-												"{{URL_API_2}}"
+												"{{API_URL}}"
 											],
 											"path": [
 												"api",
@@ -178,9 +178,49 @@
 								},
 								{
 									"name": "Obtener lista de canales",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
-										"header": []
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/workspace/:workspace_id/channels",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"workspace",
+												":workspace_id",
+												"channels"
+											],
+											"variable": [
+												{
+													"key": "workspace_id",
+													"value": "6903a2bb18b7a2eac99f1061"
+												}
+											]
+										}
 									},
 									"response": []
 								}
@@ -195,7 +235,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email_invited\": \"fonseka17.jf@gmail.com\",\r\n    \"role_invied\": \"user\"\r\n}",
+							"raw": "{\r\n    \"email_invited\": \"fonseka17.jf@gmail.com\",\r\n    \"role_invited\": \"user\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -203,9 +243,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL_API_2}}/api/workspace/:workspace_id/invite",
+							"raw": "{{API_URL}}/api/workspace/:workspace_id/invite",
 							"host": [
-								"{{URL_API_2}}"
+								"{{API_URL}}"
 							],
 							"path": [
 								"api",
@@ -216,7 +256,7 @@
 							"variable": [
 								{
 									"key": "workspace_id",
-									"value": ""
+									"value": "6903a2bb18b7a2eac99f1061"
 								}
 							]
 						}
@@ -248,9 +288,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL_API_2}}/api/workspace/",
+							"raw": "{{API_URL}}/api/workspace/",
 							"host": [
-								"{{URL_API_2}}"
+								"{{API_URL}}"
 							],
 							"path": [
 								"api",
@@ -272,7 +312,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjIwMjA0NDUsImV4cCI6MTc2MjEwNjg0NX0.MP-zvhcZI_rNlIN8mMChUS4aOVRGVDqmMPkz1AL6o0k",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
 									"type": "string"
 								}
 							]
@@ -289,9 +329,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL_API_2}}/api/workspace/",
+							"raw": "{{API_URL}}/api/workspace/",
 							"host": [
-								"{{URL_API_2}}"
+								"{{API_URL}}"
 							],
 							"path": [
 								"api",
@@ -322,9 +362,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL_API_2}}/api/auth/register",
+							"raw": "{{API_URL}}/api/auth/register",
 							"host": [
-								"{{URL_API_2}}"
+								"{{API_URL}}"
 							],
 							"path": [
 								"api",
@@ -350,9 +390,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL_API_2}}/api/auth/login",
+							"raw": "{{API_URL}}/api/auth/login",
 							"host": [
-								"{{URL_API_2}}"
+								"{{API_URL}}"
 							],
 							"path": [
 								"api",
