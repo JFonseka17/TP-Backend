@@ -45,9 +45,9 @@ class WorkspaceController {
     static async create (request, response){
         try{
             const user = request.user
-            const {name, url_img} = request.body
+            const {name, url_image} = request.body
 
-            const workspace_created = await WorkspaceService.create( user.id, name, url_img )
+            const workspace_created = await WorkspaceService.create( user.id, name, url_image )
 
             response.status(201).json(
                 {

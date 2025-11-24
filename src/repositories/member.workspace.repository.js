@@ -91,10 +91,12 @@ class MemberWorkspaceRepository {
     static async getAllByUserId(user_id) {
         try {
             const members = await MemberWorkspace.find({ id_user: user_id })
-                .populate('id_workspace')
+                .populate({ path: 'id_workspace', match: { active: true } })
                 .populate({ path: 'id_user', select: 'email name' }); // <<-- aquí
 
-            const members_list_formated = members.map((member) => {
+            const membersFiltered = members.filter(m => m.id_workspace)
+
+            const members_list_formated = membersFiltered.map((member) => {
                 const userObj = member.id_user || {};
                 return {
                     workspace_id: member.id_workspace?._id || null,
