@@ -151,6 +151,34 @@ Authorization: Bearer <AUTH_TOKEN>
     }
   - Respuesta (200): ok: true, message: "Invitación enviada correctamente"
 
+- DELETE /api/workspace/:workspace_id/channels/:channel_id/messages/:message_id
+  - Descripción: Eliminar un mensaje dentro de un canal.
+  - Middlewares: authMiddleware, workspaceMiddleware(), channelMiddleware
+  - Parámetros (path): workspace_id, channel_id, message_id
+  - Autorización: la verificación se hace via middlewares (propietario del mensaje o permisos según implementacion del servicio/middleware)
+  - Respuesta:
+    - 204 No Content: eliminación exitosa
+    - 404 Not Found: si no se encontró el mensaje
+    - 401/403: si no hay autorización
+
+- DELETE /api/workspace/:workspace_id/channels/:channel_id
+  - Descripción: Eliminar un canal dentro de un workspace.
+  - Middlewares: authMiddleware, workspaceMiddleware(['admin'])
+  - Parámetros (path): workspace_id, channel_id
+  - Respuesta:
+    - 204 No Content: eliminación exitosa
+    - 404 Not Found: si no se encontró el canal
+    - 403: si el usuario no tiene rol 'admin' en el workspace
+
+- DELETE /api/workspace/:workspace_id
+  - Descripción: Eliminar un workspace completo.
+  - Middlewares: authMiddleware, workspaceMiddleware(['admin'])
+  - Parámetros (path): workspace_id
+  - Respuesta:
+    - 204 No Content: eliminación exitosa
+    - 404 Not Found: si no se encontró el workspace
+    - 403: si el usuario no tiene rol 'admin' en el workspace
+
 Middlewares importantes
 - validateRequest(schema): valida req.body con Joi y devuelve 400 con mensajes de validación.
 - authMiddleware: valida header Authorization y decodifica JWT (400/401 en caso de token inválido o expirado).
@@ -179,6 +207,24 @@ curl -X POST https://<API_URL>/api/workspace \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <AUTH_TOKEN>" \
   -d '{"name":"Mi Workspace","url_img":""}'
+```
+
+Eliminar un mensaje (ejemplo curl):
+```bash
+curl -i -X DELETE "https://<API_URL>/api/workspace/<workspace_id>/channels/<channel_id>/messages/<message_id>" \
+  -H "Authorization: Bearer <AUTH_TOKEN>"
+```
+
+Eliminar un canal (ejemplo curl, requiere rol admin):
+```bash
+curl -i -X DELETE "https://<API_URL>/api/workspace/<workspace_id>/channels/<channel_id>" \
+  -H "Authorization: Bearer <AUTH_TOKEN>"
+```
+
+Eliminar un workspace (ejemplo curl, requiere rol admin):
+```bash
+curl -i -X DELETE "https://<API_URL>/api/workspace/<workspace_id>" \
+  -H "Authorization: Bearer <AUTH_TOKEN>"
 ```
 
 Despliegue
