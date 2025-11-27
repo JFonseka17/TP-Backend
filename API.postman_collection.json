@@ -84,7 +84,7 @@
 															"bearer": [
 																{
 																	"key": "token",
-																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
+																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjQxOTkwMzYsImV4cCI6MTc2NDI4NTQzNn0.FGzcP6wipeMHjsWB65_NRHvIoKFweupt53CepQqwHxY",
 																	"type": "string"
 																}
 															]
@@ -121,6 +121,62 @@
 																{
 																	"key": "channel_id",
 																	"value": "690672a1692d17c0bc88acb7"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Borrar mensaje",
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": [
+																{
+																	"key": "token",
+																	"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjE4MzYxNTZ9.lMJLOt0wgU0aOZ9Yzvhj2MjxO9fXCeaygaB3lqnQcbc",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{API_URL}}/api/workspace/:workspace_id/channels/:channel_id/messages/:message_id",
+															"host": [
+																"{{API_URL}}"
+															],
+															"path": [
+																"api",
+																"workspace",
+																":workspace_id",
+																"channels",
+																":channel_id",
+																"messages",
+																":message_id"
+															],
+															"variable": [
+																{
+																	"key": "workspace_id",
+																	"value": "6903a2bb18b7a2eac99f1061"
+																},
+																{
+																	"key": "channel_id",
+																	"value": "690672a1692d17c0bc88acb7"
+																},
+																{
+																	"key": "message_id",
+																	"value": "6926580983dd31a46b2c497a"
 																}
 															]
 														}
@@ -187,7 +243,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjQxOTkwMzYsImV4cCI6MTc2NDI4NTQzNn0.FGzcP6wipeMHjsWB65_NRHvIoKFweupt53CepQqwHxY",
 													"type": "string"
 												}
 											]
@@ -218,6 +274,56 @@
 												{
 													"key": "workspace_id",
 													"value": "6903a2bb18b7a2eac99f1061"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Borrar canal",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjQyMDMyNzcsImV4cCI6MTc2NDI4OTY3N30.KkgD1-QUIfGvd6Vq-_3_Vr9MXT2n2vy-n-5nyAjfkog",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/workspace/:workspace_id/channels/:channel_id",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"workspace",
+												":workspace_id",
+												"channels",
+												":channel_id"
+											],
+											"variable": [
+												{
+													"key": "workspace_id",
+													"value": "6903a2bb18b7a2eac99f1061"
+												},
+												{
+													"key": "channel_id",
+													"value": "692751c3cdd25c56db95713f"
 												}
 											]
 										}
@@ -312,7 +418,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjM2NDU4NzUsImV4cCI6MTc2MzczMjI3NX0.450gI6FUTGN_HcfOQR7nNnVfXKSHQzqTZAmo1uXsnbc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjQxOTkwMzYsImV4cCI6MTc2NDI4NTQzNn0.FGzcP6wipeMHjsWB65_NRHvIoKFweupt53CepQqwHxY",
 									"type": "string"
 								}
 							]
@@ -337,6 +443,56 @@
 								"api",
 								"workspace",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar espacio de trabajo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVsaWFuIGZvbnNlY2EiLCJlbWFpbCI6Imp1bGkxNy5kZXZAZ21haWwuY29tIiwiaWQiOiI2OTAyODE2ZTk2OWRjNGYyMWQyMmY0MjgiLCJpYXQiOjE3NjQyMDMyNzcsImV4cCI6MTc2NDI4OTY3N30.KkgD1-QUIfGvd6Vq-_3_Vr9MXT2n2vy-n-5nyAjfkog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/workspace/:workspace_id/channels/:channel_id",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"workspace",
+								":workspace_id",
+								"channels",
+								":channel_id"
+							],
+							"variable": [
+								{
+									"key": "workspace_id",
+									"value": "6903a2bb18b7a2eac99f1061"
+								},
+								{
+									"key": "channel_id",
+									"value": "692751c3cdd25c56db95713f"
+								}
 							]
 						}
 					},
