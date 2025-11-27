@@ -20,6 +20,11 @@ app.use('/api/workspace', workspaceRouter)
 
 app.use('/api/member', memberRouter)
 
+// Inserta esto en src/main.js (antes de app.listen)
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ ok: true, message: 'API up' });
+});
+
 app.listen (
     ENVIRONMENT.PORT || 8080, 
     () => {
